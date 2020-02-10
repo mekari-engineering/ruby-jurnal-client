@@ -1,17 +1,18 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "jurnal/api/version"
+
+require File.expand_path('../lib/jurnal_api/version', __FILE__)
 
 Gem::Specification.new do |spec|
-  spec.name          = "jurnal-api"
-  spec.version       = Jurnal::Api::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
+  spec.name          = "jurnal_api"
+  spec.version       = JurnalApi::VERSION
+  spec.authors       = ["mekari-devs"]
+  spec.email         = ["developer@mekari.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Ruby wrapper for the Jurnal API.}
+  # spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.homepage      = "https://github.com/mekari-engineering/jurnal_api"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -19,8 +20,8 @@ Gem::Specification.new do |spec|
     spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-    spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+    spec.metadata["source_code_uri"] = "https://github.com/mekari-engineering/jurnal_api"
+    spec.metadata["changelog_uri"] = "https://github.com/mekari-engineering/jurnal_api/CHANGELOG.md"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
@@ -38,4 +39,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "pry"
+
+  # dependency
+  spec.add_dependency "faraday", "0.17.3"
+  spec.add_dependency "faraday_middleware", "0.13.1"
 end
