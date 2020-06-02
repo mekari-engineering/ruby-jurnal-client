@@ -20,3 +20,4 @@ module JurnalApi
 
     end
   end
+end
