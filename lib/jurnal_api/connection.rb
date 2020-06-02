@@ -8,14 +8,20 @@ module JurnalApi
     private
 
     def connection(raw = false)
-      options = {
-        :headers => {'Accept' => "application/#{format}; charset=utf-8", 'User-Agent' => user_agent},
-        :url => "#{endpoint}#{authorization_path}/api/v1/",
-      }.merge(connection_options)
+      basic_headers = {
+        'Accept'      => "application/#{format}; charset=utf-8",
+        'User-Agent'  => user_agent
+      }
+
+      options = { headers: basic_headers, url: endpoint }.merge(connection_options)
 
       Faraday::Connection.new(options) do |connection|
-        connection.headers['Authorization'] = "Bearer #{access_token}" if authorization_path == 'partner/core'
-        connection.headers['apikey'] = "#{access_token}" if authorization_path == 'core'
+        case authorization_path
+        when 'partner/core'
+          connection.headers['Authorization'] = "Bearer #{access_token}"
+        when 'core'
+          connection.headers['apikey'] = "#{access_token}"
+        end
 
         connection.use Faraday::Request::UrlEncoded
         unless raw
@@ -23,6 +29,7 @@ module JurnalApi
             when 'json' then connection.use FaradayMiddleware::ParseJson
           end
         end
+
         connection.use FaradayMiddleware::RaiseHttpException
         connection.adapter(adapter)
       end

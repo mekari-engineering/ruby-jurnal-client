@@ -8,6 +8,8 @@ module JurnalApi
     VALID_OPTIONS_KEYS = [
       :access_token,
       :adapter,
+      :api_version,
+      :base_url,
       :connection_options,
       :endpoint,
       :authorization_path,
@@ -30,7 +32,7 @@ module JurnalApi
     # The endpoint that will be used to connect if none is set
     #
     # @note There is no reason to use any other endpoint at this time
-    DEFAULT_ENDPOINT = 'https://api.jurnal.id/'.freeze
+    DEFAULT_URL = 'https://sandbox-api.jurnal.id'.freeze
 
     DEFAULT_AUTHORIZATION_PATH = 'core'.freeze
 
@@ -41,6 +43,8 @@ module JurnalApi
     #
     # @note JSON is the only available format at this time
     DEFAULT_FORMAT = :json
+
+    DEFAULT_VERSION = 'api/v1'
 
     # By default, don't wrap responses with meta data (i.e. pagination)
 
@@ -75,14 +79,17 @@ module JurnalApi
 
     # Reset all configuration options to defaults
     def reset
-      self.access_token        = DEFAULT_ACCESS_TOKEN
+      self.access_token        = ENV['JURNAL_COMPANY_API_KEY'] || DEFAULT_ACCESS_TOKEN
       self.adapter             = DEFAULT_ADAPTER
-      self.connection_options  = DEFAULT_CONNECTION_OPTIONS
-      self.endpoint            = DEFAULT_ENDPOINT
+      self.api_version         = DEFAULT_VERSION
       self.authorization_path  = DEFAULT_AUTHORIZATION_PATH
+      self.connection_options  = DEFAULT_CONNECTION_OPTIONS
+      self.base_url            = ENV['JURNAL_API_URL'] || DEFAULT_URL
       self.format              = DEFAULT_FORMAT
-      self.user_agent          = DEFAULT_USER_AGENT
       self.no_response_wrapper = DEFAULT_NO_RESPONSE_WRAPPER
+      self.user_agent          = DEFAULT_USER_AGENT
+
+      self.endpoint            = base_url + '/' + authorization_path + '/' + api_version
     end
   end
 end
