@@ -19,12 +19,13 @@ Or install it yourself as:
     $ gem install jurnal_api
 
 ## Usage
+```
+    $ bundle exec irb -I lib
 
     require 'jurnal_api'
-
-    client = JurnalApi.client(acces_token: ACCESS_TOKEN)
-
+    client = JurnalApi::Client.new(acces_token: ACCESS_TOKEN)
     client.products
+```
 
 ## Contributing
 
