@@ -4,6 +4,8 @@ require File.expand_path('../jurnal_api/api', __FILE__)
 require File.expand_path('../jurnal_api/client', __FILE__)
 require File.expand_path('../jurnal_api/response', __FILE__)
 
+require 'dotenv/load'
+
 module JurnalApi
   extend Configuration
 
