@@ -36,15 +36,18 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler",      "~> 2.0"
-  spec.add_development_dependency "byebug",       "11.1.3"
-  spec.add_development_dependency "rake",         "~> 13.0"
-  spec.add_development_dependency "rspec",        "~> 3.0"
-  spec.add_development_dependency "pry"
-  spec.add_development_dependency "webmock",      "3.8.3"
+  spec.add_development_dependency "bundler",          "~> 2.0"
+  spec.add_development_dependency "byebug",           "11.1.3"
+  spec.add_development_dependency "capybara",         "2.5.0"
+  spec.add_development_dependency "pry"  
+  spec.add_development_dependency "rake",             "~> 13.0"
+  spec.add_development_dependency "rspec",            "~> 3.0"
+  spec.add_development_dependency "shoulda-context",  "1.2.2"
+  spec.add_development_dependency "shoulda-matchers", "3.1.1"
+  spec.add_development_dependency "webmock",          "3.8.3"
 
   # dependency
-  spec.add_dependency "faraday",                  "0.15.4"
-  spec.add_dependency "faraday_middleware",       "0.13.1"
-  spec.add_dependency "dotenv", "2.7.5"
+  spec.add_dependency "faraday",                      "0.15.4"
+  spec.add_dependency "faraday_middleware",           "0.13.1"
+  spec.add_dependency "dotenv",                       "2.7.5"
 end

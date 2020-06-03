@@ -1,5 +1,6 @@
 require "bundler/setup"
-require "jurnal/api"
+require "jurnal_api"
+require "capybara/rspec"
 require "webmock/rspec"
 require "json"
 require "support/fixture_support"

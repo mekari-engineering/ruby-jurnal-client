@@ -1,0 +1,147 @@
+{
+  "sales_order": {
+    "id": 6369821,
+    "transaction_no": "INV-12345678",
+    "token": "jUzBWGcH2Lsa3U27gIHOeg",
+    "email": "customer@example.com",
+    "address": "JL. Gatot Subroto 55, Jakarta, 11739",
+    "message": "message goes here",
+    "memo": "memo goes here",
+    "remaining": "10662000.0",
+    "original_amount": "10692000.0",
+    "discount_unit": "10.0",
+    "discount_price": "1080000.0",
+    "shipping_price": "0.0",
+    "shipping_address": "Test Street",
+    "is_shipped": true,
+    "selected_po_id": null,
+    "ship_via": "ship",
+    "amount_receive": "30000.0",
+    "reference_no": "TEST1234",
+    "tracking_no": "TNO098",
+    "tax_after_discount": true,
+    "tax_amount": "972000.0",
+    "status": "approved",
+    "subtotal": "12000000.0",
+    "deposit": "30000.0",
+    "custom_id": "invoice_tes",
+    "created_at": "2017-09-05T11:08:13.000Z",
+    "deleted_at": null,
+    "deletable": true,
+    "editable": true,
+    "transaction_date": "25/10/2016",
+    "due_date": "25/10/2016",
+    "shipping_date": "25/10/2016",
+    "remaining_currency_format": "Rp.  10.662.000,00",
+    "original_amount_currency_format": "Rp.  10.692.000,00",
+    "shipping_price_currency_format": "Rp.  0,00",
+    "tax_amount_currency_format": "Rp.  972.000,00",
+    "discount_price_currency_format": "Rp.  1.080.000,00",
+    "amount_receive_currency_format": "Rp.  30.000,00",
+    "subtotal_currency_format": "Rp.  12.000.000,00",
+    "deposit_currency_format": "Rp.  30.000,00",
+    "discount_per_lines": "1200000.0",
+    "discount_per_lines_currency_format": "Rp.  1.200.000,00",
+    "transaction_status": {
+      "id": 1,
+      "name": "Open",
+      "name_bahasa": "Belum Dibayar"
+    },
+    "transaction_lines_attributes": [
+      {
+        "id": 6376326,
+        "custom_id": null,
+        "description": null,
+        "amount": "10800000.0",
+        "discount": "10.0",
+        "rate": "12000000.0",
+        "tax": null,
+        "line_tax": {
+          "id": 3198,
+          "name": "ppn",
+          "rate": "10.0"
+        },
+        "has_return_line": false,
+        "quantity": 1,
+        "amount_currency_format": "Rp.  10.800.000,00",
+        "rate_currency_format": "Rp.  12.000.000,00",
+        "unit": {
+          "id": 25186,
+          "name": "Buah"
+        },
+        "product": {
+          "id": 448471,
+          "name": "Penjualan",
+          "code": null,
+          "product_custom_id": null,
+          "archive": false,
+          "quantity": 0,
+          "track_inventory": false
+        },
+        "remaining_quantity": 1
+      }
+    ],
+    "person": {
+      "id": 544187,
+      "title": null,
+      "first_name": null,
+      "middle_name": null,
+      "last_name": null,
+      "display_name": "Ahmad",
+      "email": "",
+      "address": null,
+      "billing_address": "Makassar",
+      "phone": "",
+      "fax": null,
+      "mobile": null,
+      "tax_no": null
+    },
+    "discount_type": {
+      "id": 1,
+      "name": "Percent",
+      "name_bahasa": "Persen"
+    },
+    "warehouse": {
+      "id": null,
+      "name": null,
+      "code": null
+    },
+    "tags": null,
+    "tags_string": "",
+    "term": {
+      "id": 84920,
+      "name": "Cash on Delivery",
+      "longetivity": 0
+    },
+    "is_reconciled": false,
+    "tax": {
+      "id": null,
+      "name": null,
+      "rate": null
+    },
+    "tax_details": [
+      {
+        "name": "ppn 10.0%",
+        "tax_amount": 972000,
+        "tax_amount_currency_format": "Rp.  972.000,00"
+      }
+    ],
+    "deposit_to": {
+      "id": 1378064,
+      "name": "Kas",
+      "number": "1-1000",
+      "category": {
+        "id": 3,
+        "name": "Cash & Bank"
+      }
+    },
+    "attachments": [],
+    "updated_at": "2017-09-05T11:08:13.000Z",
+    "currency_code": "IDR",
+    "currency_rate": 1,
+    "company_currency": {
+      "code": "IDR",
+      "symbol": "Rp."
+    }
+  }
+}
