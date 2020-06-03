@@ -18,8 +18,10 @@ module JurnalApi
         response        
       end
 
-      def sales_order_convert(id, params = {})
-        response = post("sales_orders/#{id}/convert_to_invoice", params)
+      def sales_order_convert_to_invoice(id, params = {})
+        url      = "sales_orders/#{id}/convert_to_invoice"
+        response = post(url, params)
+
         response
       end
 

@@ -3,34 +3,69 @@
 require 'spec_helper'
 
 RSpec.describe JurnalApi::Client::SalesOrders do
-  let(:client) { JurnalApi::Client.new }
+  let(:client)          { JurnalApi::Client.new }
+  let(:module_endpoint) { 'https://sandbox-api.jurnal.id' + '/core/api/v1' + '/sales_orders' }
 
   describe '#create' do
-    let(:dummy_params) do
-      JSON.parse(read_file_fixture('requests/sales_orders/create_valid.json'))
+    context 'successful' do
+      let(:dummy_params) do
+        JSON.parse(read_file_fixture('requests/sales_orders/create_valid.json'))
+      end
+      let(:dummy_response) do
+        read_file_fixture('responses/sales_orders/create_success.json')
+      end
+
+      before do
+        @expected_stub = 
+          stub_request(:post, module_endpoint + '.json')
+            .with(body: dummy_params)
+            .to_return(status: 201, body: dummy_response)
+      end
+
+      subject { client.sales_order_create(dummy_params) }
+
+      it 'should hit the expected stub' do
+        subject
+
+        expect(@expected_stub).to have_been_requested
+      end
+
+      it 'should return a json response' do
+        expect(subject).to eq JSON.parse(dummy_response)
+      end
     end
+  end
 
-    let(:dummy_response) do
-      read_file_fixture('responses/sales_orders/create_success.json')
-    end
+  describe '#convert_to_invoice' do
+    context 'successful' do
+      let(:dummy_params) do
+        JSON.parse(read_file_fixture('requests/sales_orders/convert_to_invoice_valid.json'))
+      end
+      let(:dummy_response) do
+        read_file_fixture('responses/sales_orders/convert_to_invoice_success.json')
+      end
 
-    subject { client.sales_order_create(dummy_params) }
+      before do
+        @stubbed_id   = 1108 # from Jurnal API documentation
+        expected_url  = module_endpoint + '/' + @stubbed_id.to_s + '/convert_to_invoice.json'
 
-    before do
-      @expected_stub = 
-        stub_request(:post, 'https://sandbox-api.jurnal.id' + '/core/api/v1' + '/sales_orders.json')
-          .with(body: dummy_params)
-          .to_return(status: 201, body: dummy_response)
-    end
+        @expected_stub = 
+          stub_request(:post, expected_url)
+            .with(body: dummy_params)
+            .to_return(status: 200, body: dummy_response)
+      end
 
-    it 'should hit the expected stub' do
-      subject
+      subject { client.sales_order_convert_to_invoice(@stubbed_id, dummy_params) }
 
-      expect(@expected_stub).to have_been_requested
-    end
+      it 'should hit the expected stub' do
+        subject
 
-    it 'should return a json response' do
-      expect(subject).to eq JSON.parse(dummy_response)
+        expect(@expected_stub).to have_been_requested
+      end
+
+      it 'should return a json response' do
+        expect(subject).to eq JSON.parse(dummy_response)
+      end
     end
   end
 end
