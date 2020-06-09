@@ -18,8 +18,8 @@ module JurnalApi
         response        
       end
 
-      def receive_payment_update(id)
-        response = delete("receive_payments/#{id}")
+      def receive_payment_update(id, params = {})
+        response = patch("receive_payments/#{id}", params)
         response
       end
 

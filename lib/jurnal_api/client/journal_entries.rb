@@ -18,8 +18,8 @@ module JurnalApi
         response        
       end
 
-      def journal_entry_update(id)
-        response = delete("journal_entries/#{id}")
+      def journal_entry_update(id, params = {})
+        response = patch("journal_entries/#{id}", params)
         response
       end
 
