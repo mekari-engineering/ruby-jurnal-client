@@ -6,6 +6,7 @@ module JurnalApi
     include JurnalApi::Client::JournalEntries
     include JurnalApi::Client::Products
     include JurnalApi::Client::RecurringSchedules
+    include JurnalApi::Client::ReceivePayment
     include JurnalApi::Client::SalesOrderPayments
     include JurnalApi::Client::SalesOrders
   end
