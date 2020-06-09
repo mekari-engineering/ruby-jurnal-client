@@ -19,7 +19,7 @@ module JurnalApi
       end
 
       def receive_payment_update(id, params = {})
-        response = patch("receive_payments/#{id}", params)
+        response = put("receive_payments/#{id}", params)
         response
       end
 

@@ -14,11 +14,6 @@ module JurnalApi
       request(:post, path, options, raw, unformatted, no_response_wrapper)
     end
 
-    # Perform an HTTP PATCH request
-    def patch(path, options={},  raw=false, unformatted=false, no_response_wrapper=no_response_wrapper())
-      request(:patch, path, options, raw, unformatted, no_response_wrapper)
-    end
-
     # Perform an HTTP PUT request
     def put(path, options={},  raw=false, unformatted=false, no_response_wrapper=no_response_wrapper())
       request(:put, path, options, raw, unformatted, no_response_wrapper)
@@ -39,7 +34,7 @@ module JurnalApi
         case method
         when :get, :delete
           request.url(URI.encode(path), options)
-        when :post, :put, :patch
+        when :post, :put
           request.path = URI.encode(path)
           request.headers['Content-Type'] = 'application/json'
           request.body = options unless options.empty?
