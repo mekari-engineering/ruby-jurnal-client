@@ -18,6 +18,16 @@ module JurnalApi
         response        
       end
 
+      def sales_invoice_update(id, params = {})
+        response = put("sales_invoices/#{id}", params)
+        response
+      end
+
+      def sales_invoice_delete(id)
+        response = delete("sales_invoices/#{id}")
+        response
+      end
+
     end
   end
 end
