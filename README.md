@@ -23,7 +23,7 @@ Or install it yourself as:
     $ bundle exec irb -I lib
 
     require 'jurnal_api'
-    client = JurnalApi::Client.new(access_token: ENV['COMPANY_API_KEY'], base_url: ENV['JURNAL_API_BASE_URL'])
+    client = JurnalApi::Client.new(access_token: ENV['JURNAL_COMPANY_API_KEY'], base_url: ENV['JURNAL_API_BASE_URL'])
     client.products
 ```
 
