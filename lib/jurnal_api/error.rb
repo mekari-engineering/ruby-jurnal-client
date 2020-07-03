@@ -8,6 +8,9 @@ module JurnalApi
   # Raised when Jurnal returns the HTTP status code 404
   class NotFound < Error; end
 
+  # Raised when Jurnal returns the HTTP status code 409
+  class Conflict < Error; end
+
   # Raised when Jurnal returns the HTTP status code 422
   class UnprocessableEntity < Error; end
 
