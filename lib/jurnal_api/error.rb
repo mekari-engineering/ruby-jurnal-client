@@ -1,6 +1,15 @@
 module JurnalApi
   # Custom error class for rescuing from all Jurnal errors
   class Error < StandardError; end
+  class ErrorWithBody < Error
+    attr_reader :body
+
+    def initialize(msg = "", body = {})
+      @body = body
+
+      super(msg)
+    end    
+  end
 
   # Raised when Jurnal returns the HTTP status code 400
   class BadRequest < Error; end
@@ -8,8 +17,11 @@ module JurnalApi
   # Raised when Jurnal returns the HTTP status code 404
   class NotFound < Error; end
 
+  # Raised when Jurnal returns the HTTP status code 409
+  class Conflict < ErrorWithBody; end
+
   # Raised when Jurnal returns the HTTP status code 422
-  class UnprocessableEntity < Error; end
+  class UnprocessableEntity < ErrorWithBody; end
 
   # Raised when Jurnal returns the HTTP status code 429
   class TooManyRequests < Error; end
