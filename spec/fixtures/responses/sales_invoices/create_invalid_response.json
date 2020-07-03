@@ -1,0 +1,23 @@
+{
+  "discount_unit": "(Value must be greater than 0.)",
+  "discount_price": "(Value must be greater than 0.)",
+  "remaining": "(Value must be greater than 0.)",
+  "original_amount": "(Value must be greater than 0.)",
+  "transaction_lines": "is not valid",
+  "tax_amount": "Negative Tax Value Only Permitted For Witholding Tax",
+  "transaction_lines.amount": "(Must be greater than 0)",
+  "amount_receive": "(Value received cannot be greater than remaining balance.)",
+  "witholding_value": "can't be added if transaction amount is less than witholding",
+  "id": null,
+  "error_full_messages": [
+    "Discount unit (Value must be greater than 0.)",
+    "Discount price (Value must be greater than 0.)",
+    "Remaining (Value must be greater than 0.)",
+    "Original amount (Value must be greater than 0.)",
+    "Transaction lines is not valid",
+    "Tax amount Negative Tax Value Only Permitted For Witholding Tax",
+    "Transaction lines amount (Must be greater than 0)",
+    "Amount receive (Value received cannot be greater than remaining balance.)",
+    "Witholding value can't be added if transaction amount is less than witholding"
+  ]
+}

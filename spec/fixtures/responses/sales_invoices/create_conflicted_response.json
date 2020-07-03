@@ -1,0 +1,9 @@
+{
+  "custom_id": "(Custom id attribute had already been used.)",
+  "transaction_no": "(Transaction number had already been used)",
+  "id": 1462189,
+  "error_full_messages": [
+    "Custom (Custom id attribute had already been used.)",
+    "Transaction no (Transaction number had already been used)"
+  ]
+}
