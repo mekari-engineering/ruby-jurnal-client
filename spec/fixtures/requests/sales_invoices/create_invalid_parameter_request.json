@@ -1,0 +1,46 @@
+{
+    "sales_invoice": {
+        "memo": "",
+        "tags": [
+            "new_subscription",
+            "new"
+        ],
+        "email": "stevens.jethefer@gmail.com",
+        "source": "INTERNAL BILLING",
+        "address": "jalan sudirman",
+        "deposit": 0,
+        "message": "",
+        "due_date": "2020-08-02",
+        "ship_via": "ship",
+        "custom_id": 610,
+        "term_name": "",
+        "is_shipped": true,
+        "person_name": "budi",
+        "tracking_no": "",
+        "reference_no": "talneta/00123",
+        "discount_unit": 0,
+        "shipping_date": "2020-07-03",
+        "selected_po_id": 1462170,
+        "shipping_price": 0,
+        "transaction_no": "BI/02/2020/07/00029/1/1",
+        "warehouse_code": "",
+        "warehouse_name": "",
+        "deposit_to_name": "cash",
+        "witholding_type": "percent",
+        "shipping_address": "jalan sudirman",
+        "transaction_date": "2020-07-03",
+        "witholding_value": 2,
+        "discount_type_name": "Value",
+        "witholding_account_name": "Prepaid Tax - Article 23",
+        "transaction_lines_attributes": [
+            {
+                "rate": "750000.0",
+                "discount": "900000.0",
+                "quantity": "12.0",
+                "line_tax_id": null,
+                "product_name": "Talenta Standard Flat",
+                "line_tax_name": "ppn"
+            }
+        ]
+    }
+}

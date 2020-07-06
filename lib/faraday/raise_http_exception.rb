@@ -11,8 +11,10 @@ module FaradayMiddleware
           raise JurnalApi::BadRequest, error_message_400(response)
         when 404
           raise JurnalApi::NotFound, error_message_400(response)
+        when 409
+          raise JurnalApi::Conflict.new error_message_400(response), response[:body]
         when 422
-          raise JurnalApi::UnprocessableEntity, error_message_400(response)          
+          raise JurnalApi::UnprocessableEntity.new error_message_400(response), response[:body]
         when 429
           raise JurnalApi::TooManyRequests, error_message_400(response)
         when 500
@@ -35,15 +37,7 @@ module FaradayMiddleware
     private
 
     def error_message_400(response)
-      "#{response[:method].to_s.upcase} #{response[:url].to_s}: #{response[:status]}#{error_body(response[:body])}"
-    end
-
-    def error_body(body)
-      # body gets passed as a string, not sure if it is passed as something else from other spots?
-      if not body.nil? and not body.empty? and body.kind_of?(String)
-        # removed multi_json thanks to wesnolte's commit
-        body = ::JSON.parse(body)
-      end
+      "#{response[:method].to_s.upcase} #{response[:url].to_s}: #{response[:status]}"
     end
 
     def error_message_500(response, body=nil)
