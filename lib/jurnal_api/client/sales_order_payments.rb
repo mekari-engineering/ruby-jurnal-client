@@ -18,6 +18,10 @@ module JurnalApi
         response        
       end
 
+      def sales_order_payment_delete(id)
+        response = delete("sales_order_payments/#{id}")
+        response
+      end
     end
   end
 end
