@@ -1,7 +1,7 @@
 module JurnalApi
   module Response
     def self.create( response_hash, ratelimit_hash )
-      return nil if response_hash.nil?
+      return {} if response_hash.nil?
 
       data = response_hash.data.dup rescue response_hash
       data.extend( self )
