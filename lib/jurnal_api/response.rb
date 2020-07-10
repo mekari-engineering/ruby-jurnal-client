@@ -1,6 +1,8 @@
 module JurnalApi
   module Response
     def self.create( response_hash, ratelimit_hash )
+      return nil if response_hash.nil?
+
       data = response_hash.data.dup rescue response_hash
       data.extend( self )
       data.instance_exec do
@@ -9,8 +11,10 @@ module JurnalApi
             instance_variable_set("@#{k}", v) if v
           end
         end
+
         @ratelimit = ratelimit_hash
       end
+
       data
     end
 

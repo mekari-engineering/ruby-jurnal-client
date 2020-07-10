@@ -41,7 +41,6 @@ module JurnalApi
         end
       end
 
-      return response if response.nil?
       return response if raw
       return response.body if no_response_wrapper
       return Response.create( response.body, {:limit => response.headers['x-ratelimit-limit'].to_i,
