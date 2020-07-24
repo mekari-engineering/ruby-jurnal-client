@@ -32,7 +32,7 @@ module JurnalApi
     # The endpoint that will be used to connect if none is set
     #
     # @note There is no reason to use any other endpoint at this time
-    DEFAULT_URL = 'https://sandbox-api.jurnal.id'.freeze
+    DEFAULT_URL = 'https://api.jurnal.id'.freeze
 
     DEFAULT_AUTHORIZATION_PATH = 'core'.freeze
 
