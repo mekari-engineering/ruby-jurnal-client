@@ -11,7 +11,6 @@ module JurnalApi
       :api_version,
       :base_url,
       :connection_options,
-      :endpoint,
       :authorization_path,
       :format,
       :user_agent,
@@ -84,12 +83,10 @@ module JurnalApi
       self.api_version         = DEFAULT_VERSION
       self.authorization_path  = DEFAULT_AUTHORIZATION_PATH
       self.connection_options  = DEFAULT_CONNECTION_OPTIONS
-      self.base_url            = ENV['JURNAL_API_URL'] || DEFAULT_URL
+      self.base_url            = ENV['JURNAL_API_BASE_URL'] || DEFAULT_URL
       self.format              = DEFAULT_FORMAT
       self.no_response_wrapper = DEFAULT_NO_RESPONSE_WRAPPER
       self.user_agent          = DEFAULT_USER_AGENT
-
-      self.endpoint            = base_url + '/' + authorization_path + '/' + api_version
     end
   end
 end
