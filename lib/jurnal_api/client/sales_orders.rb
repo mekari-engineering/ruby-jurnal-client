@@ -25,6 +25,12 @@ module JurnalApi
         response
       end
 
+      def sales_order_close(id)
+        url      = "sales_orders/#{id}/close_order"
+        response = post(url, params)
+
+        response
+      end
     end
   end
 end
