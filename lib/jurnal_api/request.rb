@@ -36,9 +36,11 @@ module JurnalApi
           request.url(URI.encode(path), options)
         when :post, :put
           request.path = URI.encode(path)
+          request.headers['Content-Type'] = 'application/json'
           request.body = options unless options.empty?
         end
       end
+
       return response if raw
       return response.body if no_response_wrapper
       return Response.create( response.body, {:limit => response.headers['x-ratelimit-limit'].to_i,

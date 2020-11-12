@@ -1,0 +1,11 @@
+{
+  "sales_order": {
+    "transaction_date": "2018-02-01",
+    "transaction_lines_attributes": [
+      {
+        "id": 1108,
+        "quantity": 2
+      }
+    ]
+  }
+}

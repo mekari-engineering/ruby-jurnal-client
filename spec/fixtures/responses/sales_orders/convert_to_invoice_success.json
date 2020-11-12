@@ -1,0 +1,188 @@
+{
+  "sales_invoice": {
+    "id": 1598,
+    "transaction_no": "INVO/30/10/2195",
+    "selected_po_id": 1537,
+    "selected_pq_id": null,
+    "token": "oj4yiccBXk6o3cyn721fAw",
+    "email": "customer@example.com",
+    "source": null,
+    "address": "JL. Gatot Subroto 55, Jakarta, 11739",
+    "message": "message goes here",
+    "memo": "memo goes here",
+    "remaining": "194400.0",
+    "original_amount": "194400.0",
+    "shipping_price": "0.0",
+    "shipping_address": "Test Street",
+    "is_shipped": true,
+    "ship_via": "ship",
+    "reference_no": "TEST1234",
+    "tracking_no": "TNO098",
+    "tax_after_discount": true,
+    "tax_amount": "0.0",
+    "witholding_value": "0.0",
+    "status": "approved",
+    "discount_price": "21600.0",
+    "witholding_type": "percent",
+    "amount_receive": "0.0",
+    "subtotal": "240000.0",
+    "deposit": "0.0",
+    "custom_id": null,
+    "created_at": "2018-03-13T04:22:12.665Z",
+    "deleted_at": null,
+    "deletable": true,
+    "editable": true,
+    "audited_by": null,
+    "transaction_date": "01/02/2018",
+    "due_date": "01/02/2018",
+    "shipping_date": "30/10/2016",
+    "witholding_amount": 0,
+    "remaining_currency_format": "Rp.  194,4",
+    "original_amount_currency_format": "Rp.  194,4",
+    "shipping_price_currency_format": "Rp.  0,0",
+    "tax_amount_currency_format": "Rp.  0,0",
+    "witholding_amount_currency_format": "Rp.  0,0",
+    "discount_price_currency_format": "Rp.  21,6",
+    "amount_receive_currency_format": "Rp.  0,0",
+    "subtotal_currency_format": "Rp.  240,0",
+    "deposit_currency_format": "Rp.  0,0",
+    "has_deliveries": false,
+    "discount_per_lines": "24000.0",
+    "discount_per_lines_currency_format": "Rp.  24,0",
+    "payment_received_amount": "0.0",
+    "payment_received_amount_currency_format": "Rp.  0,0",
+    "transaction_status": {
+      "id": 5,
+      "name": "Overdue",
+      "name_bahasa": "Lewat Jatuh Tempo"
+    },
+    "transaction_lines_attributes": [
+      {
+        "id": 1161,
+        "custom_id": null,
+        "description": null,
+        "amount": "216000.0",
+        "discount": "10.0",
+        "rate": "120000.0",
+        "tax": null,
+        "line_tax": {
+          "id": null,
+          "name": null,
+          "rate": null
+        },
+        "amount_currency_format": "Rp.  216,0",
+        "rate_currency_format": "Rp.  120,0",
+        "has_return_line": false,
+        "quantity": 2,
+        "product": {
+          "id": 183,
+          "name": "Sales",
+          "code": null,
+          "product_custom_id": "custom dong",
+          "archive": false,
+          "quantity": 0,
+          "quantity_string": "0.0",
+          "track_inventory": false
+        },
+        "unit": {
+          "id": 119,
+          "name": "Pcs"
+        }
+      }
+    ],
+    "payments": [
+      {
+        "id": 1538,
+        "transaction_no": "INV-12345708",
+        "transaction_date": "25/10/2016"
+      }
+    ],
+    "sales_returns": [],
+    "sales_deliveries": [],
+    "credit_memos": [],
+    "sales_order": {
+      "id": 1537,
+      "transaction_no": "INV-12345698"
+    },
+    "sales_quote": {
+      "id": null,
+      "transaction_no": null
+    },
+    "person": {
+      "id": 55,
+      "display_name": "Display Name",
+      "title": "Mr.",
+      "first_name": "First Name",
+      "middle_name": "Middle Name",
+      "last_name": "Last Name",
+      "tax_no": "tax-no-765",
+      "email": "email@jurnal.id",
+      "address": "Address here",
+      "billing_address": "TPL A3 19",
+      "phone": "12412124123",
+      "fax": "32412342314"
+    },
+    "discount_type": {
+      "id": 1,
+      "name": "Percent",
+      "name_bahasa": "Persen"
+    },
+    "discount_unit": "10.0",
+    "warehouse": {
+      "id": 5,
+      "name": "Gudang A",
+      "code": "67"
+    },
+    "deposit_to": {
+      "id": null,
+      "name": null,
+      "number": null,
+      "category": {
+        "id": null,
+        "name": null
+      }
+    },
+    "term": {
+      "id": 590,
+      "name": "Custom",
+      "longetivity": 0
+    },
+    "tags": [
+      {
+        "id": 24,
+        "name": "Dina"
+      }
+    ],
+    "tags_string": "Dina",
+    "has_payments": false,
+    "earliest_payment_date": "",
+    "tax": {
+      "id": null,
+      "name": null,
+      "rate": null
+    },
+    "tax_details": [],
+    "attachments": [],
+    "email_previews": {
+      "times_sent": 0,
+      "sent_to_list": []
+    },
+    "is_reconciled": false,
+    "witholding_account": {
+      "id": null,
+      "name": null,
+      "number": null,
+      "category": {
+        "id": null,
+        "name": null
+      }
+    },
+    "updated_at": "2018-03-13T04:22:12.665Z",
+    "currency_code": "IDR",
+    "currency_rate": 1,
+    "company_currency": {
+      "code": "IDR",
+      "symbol": "Rp."
+    }
+  }
+}

@@ -6,6 +6,7 @@ module JurnalApi
   class API
     # @private
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
+    attr_reader :endpoint
 
     # Creates a new API
     def initialize(options={})
@@ -21,6 +22,10 @@ module JurnalApi
         conf[key] = send key
       end
       conf
+    end
+
+    def endpoint
+      base_url + '/' + authorization_path + '/' + api_version
     end
 
     include Connection
