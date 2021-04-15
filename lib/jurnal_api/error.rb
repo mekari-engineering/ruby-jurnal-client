@@ -43,4 +43,8 @@ module JurnalApi
 
   # Raised when Jurnal returns the HTTP status code 429
   class RateLimitExceeded < Error; end
+
+  # Raised when encountering timeout experienced by Faraday
+  class OpenTimeout < Error; end
+  class ReadTimeout < Error; end  
 end
