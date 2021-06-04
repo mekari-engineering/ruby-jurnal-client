@@ -27,6 +27,10 @@ module FaradayMiddleware
           raise JurnalApi::GatewayTimeout, error_message_500(response, "504 Gateway Time-out")
         end
       end
+    rescue Faraday::ConnectionFailed
+      raise JurnalApi::OpenTimeout, 'Jurnal API takes too long to accept connection'
+    rescue Faraday::TimeoutError
+      raise JurnalApi::ReadTimeout, 'Jurnal API takes too long to render response'
     end
 
     def initialize(app)
