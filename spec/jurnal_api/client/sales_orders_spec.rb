@@ -9,7 +9,7 @@ RSpec.describe JurnalApi::Client::SalesOrders do
   describe '#create' do
     context 'successful' do
       let(:dummy_params) do
-        JSON.parse(read_file_fixture('requests/sales_orders/create_valid.json'))
+        read_file_fixture('requests/sales_orders/create_valid.json')
       end
       let(:dummy_response) do
         read_file_fixture('responses/sales_orders/create_success.json')
@@ -18,11 +18,11 @@ RSpec.describe JurnalApi::Client::SalesOrders do
       before do
         @expected_stub = 
           stub_request(:post, module_endpoint + '.json')
-            .with(body: dummy_params)
-            .to_return(status: 201, body: dummy_response)
+            .with(body: dummy_params.to_json)
+            .to_return(status: 201, body: dummy_response.to_json)
       end
 
-      subject { client.sales_order_create(dummy_params) }
+      subject { client.sales_order_create(dummy_params.to_json) }
 
       it 'should hit the expected stub' do
         subject
@@ -31,7 +31,7 @@ RSpec.describe JurnalApi::Client::SalesOrders do
       end
 
       it 'should return a json response' do
-        expect(subject).to eq JSON.parse(dummy_response)
+        expect(subject).to eq dummy_response
       end
     end
   end
@@ -39,7 +39,7 @@ RSpec.describe JurnalApi::Client::SalesOrders do
   describe '#convert_to_invoice' do
     context 'successful' do
       let(:dummy_params) do
-        JSON.parse(read_file_fixture('requests/sales_orders/convert_to_invoice_valid.json'))
+        read_file_fixture('requests/sales_orders/convert_to_invoice_valid.json')
       end
       let(:dummy_response) do
         read_file_fixture('responses/sales_orders/convert_to_invoice_success.json')
@@ -49,13 +49,13 @@ RSpec.describe JurnalApi::Client::SalesOrders do
         @stubbed_id   = 1108 # from Jurnal API documentation
         expected_url  = module_endpoint + '/' + @stubbed_id.to_s + '/convert_to_invoice.json'
 
-        @expected_stub = 
+        @expected_stub =
           stub_request(:post, expected_url)
-            .with(body: dummy_params)
-            .to_return(status: 200, body: dummy_response)
+            .with(body: dummy_params.to_json)
+            .to_return(status: 200, body: dummy_response.to_json)
       end
 
-      subject { client.sales_order_convert_to_invoice(@stubbed_id, dummy_params) }
+      subject { client.sales_order_convert_to_invoice(@stubbed_id, dummy_params.to_json) }
 
       it 'should hit the expected stub' do
         subject
@@ -64,7 +64,7 @@ RSpec.describe JurnalApi::Client::SalesOrders do
       end
 
       it 'should return a json response' do
-        expect(subject).to eq JSON.parse(dummy_response)
+        expect(subject).to eq dummy_response
       end
     end
   end
