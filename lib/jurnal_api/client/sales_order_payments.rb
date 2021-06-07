@@ -18,6 +18,11 @@ module JurnalApi
         response        
       end
 
+      def sales_order_payment_update(id, params = {})
+        response = put("sales_order_payments/#{id}", params)
+        response        
+      end
+
       def sales_order_payment_delete(id)
         response = delete("sales_order_payments/#{id}")
         response
