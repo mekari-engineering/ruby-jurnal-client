@@ -4,7 +4,7 @@ module JurnalApi
     module HealthChecks
 
       def health_check(params = {})
-        response = get('core/ping/health_check', params)
+        response = get('ping/health_check', params, true)
         response
       end
     end

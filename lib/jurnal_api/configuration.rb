@@ -14,7 +14,8 @@ module JurnalApi
       :authorization_path,
       :format,
       :user_agent,
-      :no_response_wrapper
+      :no_response_wrapper,
+      :no_version
     ].freeze
 
     # By default, don't set a user access token
@@ -56,6 +57,9 @@ module JurnalApi
     # The user agent that will be sent to the API endpoint if none is set
     DEFAULT_USER_AGENT = "Jurnal Ruby Gem #{JurnalApi::VERSION}".freeze
 
+    # The api version will be sent to the API endpoint in default
+    DEFAULT_NO_VERSION = false
+
     # @private
     attr_accessor *VALID_OPTIONS_KEYS
 
@@ -87,6 +91,7 @@ module JurnalApi
       self.format              = DEFAULT_FORMAT
       self.no_response_wrapper = DEFAULT_NO_RESPONSE_WRAPPER
       self.user_agent          = DEFAULT_USER_AGENT
+      self.no_version          = DEFAULT_NO_VERSION
     end
   end
 end
