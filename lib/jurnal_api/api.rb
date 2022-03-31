@@ -25,11 +25,7 @@ module JurnalApi
     end
 
     def endpoint
-      if no_version
-        base_url + '/' + authorization_path
-      else
-        base_url + '/' + authorization_path + '/' + api_version
-      end
+      base_url + '/' + authorization_path + '/' + api_version
     end
 
     include Connection

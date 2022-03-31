@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 RSpec.describe JurnalApi::Client::HealthChecks do
-  let(:client)          { JurnalApi::Client.new(no_version: true) }
+  let(:client)          { JurnalApi::Client.new(api_version: '') }
   let(:module_endpoint) { 'https://sandbox-api.jurnal.id' + '/core' + '/ping/health_check' }
 
   describe '#check' do
