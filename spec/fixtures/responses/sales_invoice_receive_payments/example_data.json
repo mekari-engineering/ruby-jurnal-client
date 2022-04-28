@@ -1,0 +1,97 @@
+{
+  "receive_payments": [
+    {
+      "id": 6143807,
+      "transaction_no": "10023",
+      "token": "wRr-rn_wLfe0zKl9xpGwpA",
+      "memo": "testing memo",
+      "custom_id": null,
+      "status": "approved",
+      "transaction_status": {
+        "id": 3,
+        "name": "Paid",
+        "created_at": "2014-11-11T17:57:35.000Z",
+        "updated_at": "2014-11-11T17:57:35.000Z",
+        "name_bahasa": "Lunas"
+      },
+      "deleted_at": null,
+      "deletable": true,
+      "editable": true,
+      "transaction_date": "11/08/2017",
+      "person": {
+        "id": 765761,
+        "name": "Samuel Widjaya",
+        "email": "samuelwidjaya@windowslive.com",
+        "address": "Citra Garden 2 Blok K6/2",
+        "phone": null,
+        "fax": null
+      },
+      "transaction_type": {
+        "id": 2,
+        "name": "Receive Payment"
+      },
+      "payment_method": {
+        "id": 69218,
+        "name": "Kas"
+      },
+      "deposit_to": {
+        "id": 1378064,
+        "name": "Kas",
+        "number": "1-1000",
+        "category": {
+          "id": 3,
+          "name": "Cash & Bank"
+        }
+      },
+      "is_draft": false,
+      "witholding": {
+        "witholding_account_name": null,
+        "witholding_account_number": null,
+        "account_id": null,
+        "value": "0.0",
+        "type": "percent",
+        "amount": 0,
+        "amount_currency_format": "Rp.  0,00",
+        "category": {
+          "id": null,
+          "name": null
+        }
+      },
+      "total": 200000.00016,
+      "total_currency_format": "Rp.  200.000,00",
+      "records": [
+        {
+          "id": 2075312,
+          "transaction_id": 1,
+          "amount": "200000.00016",
+          "description": null,
+          "transaction_type_id": 1,
+          "transaction_type": "Invoice",
+          "transaction_no": "170KGGW",
+          "amount_currency_format": "Rp.  200.000,00",
+          "transaction_due_date": "11/08/2017",
+          "transaction_total": 200000.00016,
+          "transaction_total_currency_format": "Rp.  200.000,00",
+          "transaction_balance_due": 0,
+          "transaction_balance_due_currency_format": "Rp.  0,00"
+        }
+      ],
+      "is_reconciled": false,
+      "attachments": [],
+      "tags": [
+        {
+          "id": 112977,
+          "name": "Fake Tratorria Gili Trawangan"
+        }
+      ],
+      "tags_string": "Fake Tratorria Gili Trawangan",
+      "created_at": "2017-08-25T12:03:15.000Z",
+      "updated_at": "2017-08-25T12:03:15.000Z",
+      "currency_code": "IDR",
+      "currency_rate": 1
+    }
+  ],
+  "total_count": 1,
+  "current_page": 1,
+  "total_pages": 1
+}
