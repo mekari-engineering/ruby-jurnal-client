@@ -1,6 +1,6 @@
 module JurnalApi
   class Client
-    # Defines methods related to SalesOrders
+    # Defines methods related to SalesInvoices
     module SalesInvoices
 
       def sales_invoices(params = {})
