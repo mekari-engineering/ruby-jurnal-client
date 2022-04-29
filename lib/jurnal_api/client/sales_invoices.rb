@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module JurnalApi
   class Client
     # Defines methods related to SalesOrders
@@ -15,7 +17,7 @@ module JurnalApi
 
       def sales_invoice_create(params = {})
         response = post('sales_invoices', params)
-        response        
+        response
       end
 
       def sales_invoice_update(id, params = {})
@@ -28,6 +30,9 @@ module JurnalApi
         response
       end
 
+      def sales_invoice_receive_payments(id, params = {})
+        get("sales_invoices/#{id}/receive_payments", params)
+      end
     end
   end
 end

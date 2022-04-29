@@ -1,0 +1,97 @@
+{
+  "sales_order_payments": [
+    {
+      "id": 6396177,
+      "transaction_no": "10037",
+      "token": "oTwizJgMbdZcNZXDi0akOg",
+      "memo": null,
+      "custom_id": null,
+      "status": "approved",
+      "transaction_status": {
+        "id": 3,
+        "name": "Paid",
+        "created_at": "2014-11-11T17:57:35.000Z",
+        "updated_at": "2014-11-11T17:57:35.000Z",
+        "name_bahasa": "Lunas"
+      },
+      "deleted_at": null,
+      "deletable": true,
+      "editable": true,
+      "transaction_date": "06/09/2017",
+      "person": {
+        "id": 787483,
+        "name": "Samuel Widjaya",
+        "email": "samuelwidjaya@windowslive.com",
+        "address": null,
+        "phone": "081806888350",
+        "fax": null
+      },
+      "transaction_type": {
+        "id": 2,
+        "name": "Receive Payment"
+      },
+      "payment_method": {
+        "id": null,
+        "name": null
+      },
+      "deposit_to": {
+        "id": 1378064,
+        "name": "Kas",
+        "number": "1-1000",
+        "category": {
+          "id": 3,
+          "name": "Cash & Bank"
+        }
+      },
+      "is_draft": false,
+      "witholding": {
+        "witholding_account_name": null,
+        "witholding_account_number": null,
+        "account_id": null,
+        "value": "0.0",
+        "type": "percent",
+        "amount": 0,
+        "amount_currency_format": "Rp.  0,00",
+        "category": {
+          "id": null,
+          "name": null
+        }
+      },
+      "total": 4500000,
+      "total_currency_format": "Rp.  4.500.000,00",
+      "records": [
+        {
+          "id": 2163027,
+          "transaction_id": 1,
+          "amount": "4500000.0",
+          "description": "",
+          "transaction_type_id": 1,
+          "transaction_type": "Invoice",
+          "transaction_no": "INV-10005",
+          "amount_currency_format": "Rp.  4.500.000,00",
+          "transaction_due_date": "05/11/2017",
+          "transaction_total": 4500000,
+          "transaction_total_currency_format": "Rp.  4.500.000,00",
+          "transaction_balance_due": 0,
+          "transaction_balance_due_currency_format": "Rp.  0,00"
+        }
+      ],
+      "is_reconciled": false,
+      "attachments": [],
+      "tags": [
+        {
+          "id": 75216,
+          "name": "Mitra"
+        }
+      ],
+      "tags_string": "Mitra",
+      "created_at": "2017-09-06T09:17:31.000Z",
+      "updated_at": "2017-09-06T09:17:31.000Z",
+      "currency_code": "IDR",
+      "currency_rate": 1
+    }
+  ],
+  "total_count": 1,
+  "current_page": 1,
+  "total_pages": 1
+}
