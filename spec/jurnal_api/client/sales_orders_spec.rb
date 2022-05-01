@@ -83,7 +83,7 @@ RSpec.describe JurnalApi::Client::SalesOrders do
       end
 
       before do
-        expected_url = module_endpoint + '/1/receive_payments.json'
+        expected_url = module_endpoint + '/1/sales_order_payments.json'
 
         @expected_stub =
           stub_request(:get, expected_url)
