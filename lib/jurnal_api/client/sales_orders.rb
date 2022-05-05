@@ -34,7 +34,7 @@ module JurnalApi
       end
 
       def sales_order_receive_payments(id, params = {})
-        get("sales_orders/#{id}/receive_payments", params)
+        get("sales_orders/#{id}/sales_order_payments", params)
       end
     end
   end
