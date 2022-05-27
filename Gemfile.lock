@@ -52,7 +52,7 @@ GEM
       method_source (~> 1.0)
     public_suffix (4.0.6)
     racc (1.5.2)
-    rack (2.2.3)
+    rack (2.2.3.1)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rake (13.0.3)
@@ -92,7 +92,7 @@ DEPENDENCIES
   capybara (= 2.5.0)
   jurnal_api!
   pry
-  rack (= 2.2.3)
+  rack (= 2.2.3.1)
   rake (~> 13.0)
   rspec (~> 3.0)
   shoulda-context (= 1.2.2)
