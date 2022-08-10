@@ -2,8 +2,8 @@ module JurnalApi
   class Client
     # Defines methods related to Contacts
     module Contacts
-      def contacts(params = {})
-        response = get('contacts', params)
+      def contact_create(params = {})
+        response = post('contacts', params)
         response
       end
 
