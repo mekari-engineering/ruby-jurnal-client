@@ -25,7 +25,13 @@ module JurnalApi
     end
 
     def endpoint
-      base_url + '/' + authorization_path + '/' + api_version
+      # certain endpoint don't need authorization_path
+      #   ex: /api/v1/contacts
+      if authorization_path.empty?
+        return "#{base_url}/#{api_version}"
+      end
+
+      "#{base_url}/#{authorization_path}/#{api_version}"
     end
 
     include Connection
