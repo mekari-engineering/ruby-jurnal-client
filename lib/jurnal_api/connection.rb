@@ -34,11 +34,12 @@ module JurnalApi
         case authorization_path
         when 'partner/core'
           connection.headers['Authorization'] = "Bearer #{access_token}"
-        when 'core', ''
+        when 'core', '', nil
+        # when -> (authorization_path) { ['core', nil].include? authorization_path }
           # certain endpoint don't need authorization_path and need apikey
           #   ex: /api/v1/contacts
           connection.headers['apikey'] = "#{access_token}"
-        end        
+        end
       end
     end
   end

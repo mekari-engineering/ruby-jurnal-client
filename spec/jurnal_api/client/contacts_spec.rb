@@ -9,7 +9,7 @@ RSpec.describe JurnalApi::Client::Contacts do
 
   let(:client) do
     JurnalApi::Client.new(
-      authorization_path: '',
+      authorization_path: nil, # cause we dont need prefix endpoint 'core' or 'partner/core'
       access_token:       access_token,
       base_url:           base_url
     )
