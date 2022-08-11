@@ -4,16 +4,8 @@ require 'spec_helper'
 
 RSpec.describe JurnalApi::Client::Contacts do
   let(:access_token)    { 'dummytoken123' }
-  let(:base_url)        { 'https://sandbox-api.jurnal.id' }
-  let(:module_endpoint) { "#{base_url}/api/v1/contacts" }
-
-  let(:client) do
-    JurnalApi::Client.new(
-      authorization_path: nil, # cause we dont need prefix endpoint 'core' or 'partner/core'
-      access_token:       access_token,
-      base_url:           base_url
-    )
-  end
+  let(:module_endpoint) { 'https://sandbox-api.jurnal.id/core/api/v1/contacts' }
+  let(:client)          { JurnalApi::Client.new(access_token: access_token) }
 
   describe '#contact_create' do
     context 'successful' do
