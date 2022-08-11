@@ -5,13 +5,11 @@ module JurnalApi
     # Defines methods related to Contacts
     module Contacts
       def contact_create(params = {})
-        response = post('contacts', params)
-        response
+        post('contacts', params)
       end
 
       def contact_find(id)
-        response = get("contacts/#{id}")
-        response
+        get("contacts/#{id}")
       end
     end
   end
