@@ -1,0 +1,76 @@
+{
+  "person": {
+    "id": 38006570,
+    "display_name": "Elon Musk",
+    "title": null,
+    "first_name": null,
+    "middle_name": null,
+    "last_name": null,
+    "fullname_with_title": "",
+    "mobile": null,
+    "identity_type": "",
+    "identity_number": null,
+    "email": "",
+    "other_detail": null,
+    "associate_company": null,
+    "phone": null,
+    "fax": null,
+    "tax_no": null,
+    "archive": false,
+    "billing_address": null,
+    "billing_address_no": null,
+    "billing_address_rt": null,
+    "billing_address_rw": null,
+    "billing_address_post_code": null,
+    "billing_address_kelurahan": null,
+    "billing_address_kecamatan": null,
+    "billing_address_kabupaten": null,
+    "billing_address_provinsi": null,
+    "address": null,
+    "bank_account_details": [
+      {
+        "bank_name": null,
+        "bank_partner_id": 0,
+        "bank_branch": "",
+        "bank_account_holder_name": "",
+        "bank_account_number": "",
+        "is_valid": null
+      }
+    ],
+    "default_ar_account_id": 2671,
+    "default_ap_account_id": 2684,
+    "disable_max_credit_limit": true,
+    "disable_max_debit_limit": true,
+    "max_credit_limit": null,
+    "max_debit_limit": null,
+    "term_id": null,
+    "is_customer": true,
+    "is_vendor": null,
+    "is_employee": null,
+    "custom_id": null,
+    "is_others": null,
+    "contact_group_ids": [],
+    "contact_group_names": [],
+    "default_ar_account": {
+      "name": "Account Receivables - Customers",
+      "number": "1-1100",
+      "path": "/accounts/2671"
+    },
+    "default_ap_account": {
+      "name": "3rd Parties - Accounts Payable",
+      "number": "2-1110",
+      "path": "/accounts/2684"
+    },
+    "term_name": "",
+    "create_transaction_auth": {
+      "sales_invoice": "/invoices/new?person_id=38006570",
+      "credit_memo": "/customer_credit_memos/new?person_id=38006570"
+    },
+    "authorization_list": {
+      "edit": true,
+      "delete": true,
+      "merge": true
+    }
+  },
+  "restricted_user": false
+}

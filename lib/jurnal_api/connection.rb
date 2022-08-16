@@ -34,9 +34,9 @@ module JurnalApi
         case authorization_path
         when 'partner/core'
           connection.headers['Authorization'] = "Bearer #{access_token}"
-        when 'core'
+        when 'core', '', nil
           connection.headers['apikey'] = "#{access_token}"
-        end        
+        end
       end
     end
   end
