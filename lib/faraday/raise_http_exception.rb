@@ -9,6 +9,8 @@ module FaradayMiddleware
         case response[:status].to_i
         when 400
           raise JurnalApi::BadRequest, error_message_400(response)
+        when 403
+          raise JurnalApi::Forbidden.new error_message_400(response), response[:body]
         when 404
           raise JurnalApi::NotFound, error_message_400(response)
         when 409
