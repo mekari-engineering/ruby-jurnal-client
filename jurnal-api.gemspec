@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "byebug",           "11.1.3"
   spec.add_development_dependency "capybara",         "2.5.0"
   spec.add_development_dependency "pry"  
-  spec.add_development_dependency "rack",             "2.2.3"
+  spec.add_development_dependency "rack",             "3.0.4.2"
   spec.add_development_dependency "rake",             "~> 13.0"
   spec.add_development_dependency "rspec",            "~> 3.0"
   spec.add_development_dependency "shoulda-context",  "1.2.2"
