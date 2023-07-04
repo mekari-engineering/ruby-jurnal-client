@@ -6,6 +6,53 @@ RSpec.describe JurnalApi::Client::SalesOrders do
   let(:client)          { JurnalApi::Client.new }
   let(:module_endpoint) { 'https://sandbox-api.jurnal.id' + '/core/api/v1' + '/sales_orders' }
 
+  describe '#get' do
+    context 'successful' do
+      let(:dummy_response) { read_file_fixture('responses/sales_orders/create_success.json') }
+      let(:sales_order_id) { dummy_response['sales_order']['id'] }
+
+      before do
+        @expected_stub = stub_request(:get, "#{module_endpoint}/#{sales_order_id}.json")
+          .to_return(status: 200, body: dummy_response.to_json)
+      end
+
+      subject { client.sales_order_find(sales_order_id) }
+
+      it 'should hit the expected stub' do
+        subject
+
+        expect(@expected_stub).to have_been_requested
+      end
+
+      it 'should return a json response' do
+        expect(subject).to eq dummy_response
+      end
+    end
+
+    context 'failed' do
+      context 'with status 503' do
+        let(:dummy_response) { read_file_fixture('responses/sales_orders/create_success.json') }
+        let(:sales_order_id) { dummy_response['sales_order']['id'] }
+
+        before do
+          @expected_stub = stub_request(:get, "#{module_endpoint}/#{sales_order_id}.json")
+            .to_return(
+              status: 503,
+              body: 'upstream connect error or disconnect/reset before headers. reset reason: connection termination',
+            )
+        end
+
+        subject { client.sales_order_find(sales_order_id) }
+
+        it 'should hit the expected stub' do
+          expect { subject }.to raise_error JurnalApi::ServiceUnavailable
+
+          expect(@expected_stub).to have_been_requested
+        end
+      end
+    end
+  end
+
   describe '#create' do
     context 'successful' do
       let(:dummy_params) do
