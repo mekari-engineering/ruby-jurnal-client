@@ -23,7 +23,8 @@ module JurnalApi
 
         unless raw
           case format.to_s.downcase
-            when 'json' then connection.use FaradayMiddleware::ParseJson
+            when 'json'
+              connection.use(FaradayMiddleware::ParseJson, :content_type => /\bjson$/)
           end
         end
 
