@@ -14,6 +14,9 @@ module JurnalApi
   # Raised when Jurnal returns the HTTP status code 400
   class BadRequest < Error; end
 
+  # Raised when Jurnal returns the HTTP status code 403
+  class Forbidden < ErrorWithBody; end
+
   # Raised when Jurnal returns the HTTP status code 404
   class NotFound < Error; end
 

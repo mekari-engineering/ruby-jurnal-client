@@ -23,7 +23,8 @@ module JurnalApi
 
         unless raw
           case format.to_s.downcase
-            when 'json' then connection.use FaradayMiddleware::ParseJson
+            when 'json'
+              connection.use(FaradayMiddleware::ParseJson, :content_type => /\bjson$/)
           end
         end
 
@@ -34,9 +35,9 @@ module JurnalApi
         case authorization_path
         when 'partner/core'
           connection.headers['Authorization'] = "Bearer #{access_token}"
-        when 'core'
+        when 'core', '', nil
           connection.headers['apikey'] = "#{access_token}"
-        end        
+        end
       end
     end
   end
