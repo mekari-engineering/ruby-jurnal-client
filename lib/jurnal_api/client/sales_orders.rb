@@ -14,6 +14,11 @@ module JurnalApi
         response
       end
 
+      def sales_order_link(id)
+        response = get("sales_orders/#{id}/register_tiny_url")
+        response
+      end
+
       def sales_order_create(params = {})
         response = post('sales_orders', params)
         response
