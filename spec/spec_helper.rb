@@ -4,11 +4,13 @@ require "capybara/rspec"
 require "webmock/rspec"
 require "json"
 require "support/fixture_support"
+require "support/stubber_support"
 
 WebMock.disable_net_connect!
 
 RSpec.configure do |config|
   config.include FixtureSupport
+  config.include StubberSupport
 
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = ".rspec_status"

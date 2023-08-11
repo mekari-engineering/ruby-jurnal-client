@@ -23,7 +23,7 @@ RSpec.describe JurnalApi::Client::SalesInvoices do
       @expected_stub =
         stub_request(:get, expected_url)
         .with(query: dummy_params)
-        .to_return(status: 200, body: dummy_response.to_json)
+        .to_return(status: 200, body: dummy_response.to_json, headers: header_json)
     end
 
     subject { client.sales_invoice_receive_payments(1, dummy_params) }
@@ -36,6 +36,32 @@ RSpec.describe JurnalApi::Client::SalesInvoices do
 
     it 'should return a json response' do
       expect(subject).to eq dummy_response
+    end
+  end
+
+  describe '#get si link' do
+    context 'successful' do
+      let(:dummy_response) do
+        { 'url' => 'http://dummy.com/123456' }
+      end
+      let(:sales_invoice_id) { '1234' }
+
+      before do
+        @expected_stub = stub_request(:get, "#{module_endpoint}/#{sales_invoice_id}/register_tiny_url.json")
+          .to_return(status: 200, body: dummy_response.to_json, headers: header_json)
+      end
+
+      subject { client.sales_invoice_link(sales_invoice_id) }
+
+      it 'should hit the expected stub' do
+        subject
+
+        expect(@expected_stub).to have_been_requested
+      end
+
+      it 'should return a json response' do
+        expect(subject).to eq dummy_response
+      end
     end
   end
 end
