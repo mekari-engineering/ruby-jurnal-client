@@ -13,7 +13,7 @@ RSpec.describe JurnalApi::Client::SalesOrders do
 
       before do
         @expected_stub = stub_request(:get, "#{module_endpoint}/#{sales_order_id}.json")
-          .to_return(status: 200, body: dummy_response.to_json)
+          .to_return(status: 200, body: dummy_response.to_json, headers: header_json)
       end
 
       subject { client.sales_order_find(sales_order_id) }
@@ -53,6 +53,32 @@ RSpec.describe JurnalApi::Client::SalesOrders do
     end
   end
 
+  describe '#get so link' do
+    context 'successful' do
+      let(:dummy_response) do
+        { 'url' => 'http://dummy.com/123456' }
+      end
+      let(:sales_order_id) { '1234' }
+
+      before do
+        @expected_stub = stub_request(:get, "#{module_endpoint}/#{sales_order_id}/register_tiny_url.json")
+          .to_return(status: 200, body: dummy_response.to_json, headers: header_json)
+      end
+
+      subject { client.sales_order_link(sales_order_id) }
+
+      it 'should hit the expected stub' do
+        subject
+
+        expect(@expected_stub).to have_been_requested
+      end
+
+      it 'should return a json response' do
+        expect(subject).to eq dummy_response
+      end
+    end
+  end
+
   describe '#create' do
     context 'successful' do
       let(:dummy_params) do
@@ -66,7 +92,7 @@ RSpec.describe JurnalApi::Client::SalesOrders do
         @expected_stub = 
           stub_request(:post, module_endpoint + '.json')
             .with(body: dummy_params.to_json)
-            .to_return(status: 201, body: dummy_response.to_json)
+            .to_return(status: 201, body: dummy_response.to_json, headers: header_json)
       end
 
       subject { client.sales_order_create(dummy_params.to_json) }
@@ -99,7 +125,7 @@ RSpec.describe JurnalApi::Client::SalesOrders do
         @expected_stub =
           stub_request(:post, expected_url)
             .with(body: dummy_params.to_json)
-            .to_return(status: 200, body: dummy_response.to_json)
+            .to_return(status: 200, body: dummy_response.to_json, headers: header_json)
       end
 
       subject { client.sales_order_convert_to_invoice(@stubbed_id, dummy_params.to_json) }
@@ -135,7 +161,7 @@ RSpec.describe JurnalApi::Client::SalesOrders do
         @expected_stub =
           stub_request(:get, expected_url)
           .with(query: dummy_params)
-          .to_return(status: 200, body: dummy_response.to_json)
+          .to_return(status: 200, body: dummy_response.to_json, headers: header_json)
       end
 
       subject { client.sales_order_receive_payments(1, dummy_params) }

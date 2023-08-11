@@ -25,7 +25,7 @@ RSpec.describe JurnalApi::Client::Contacts do
         @expected_stub = 
           stub_request(:post, "#{module_endpoint}.json")
             .with(headers: { apikey: access_token }, body: dummy_params.to_json)
-            .to_return(status: 201, body: dummy_response.to_json)
+            .to_return(status: 201, body: dummy_response.to_json, headers: header_json)
       end
 
       subject { client.contact_create(dummy_params.to_json) }
@@ -50,7 +50,7 @@ RSpec.describe JurnalApi::Client::Contacts do
         @expected_stub = 
           stub_request(:post, "#{module_endpoint}.json")
             .with(headers: { apikey: access_token }, body: dummy_params.to_json)
-            .to_return(status: 403, body: dummy_response.to_json)
+            .to_return(status: 403, body: dummy_response.to_json, headers: header_json)
       end
 
       subject { client.contact_create(dummy_params.to_json) }
@@ -76,7 +76,7 @@ RSpec.describe JurnalApi::Client::Contacts do
         @expected_stub =
           stub_request(:get, "#{module_endpoint}/#{stubbed_id}.json")
             .with(headers: { apikey: access_token })
-            .to_return(status: 200, body: dummy_response.to_json)
+            .to_return(status: 200, body: dummy_response.to_json, headers: header_json)
       end
 
       subject { client.contact_find(stubbed_id) }

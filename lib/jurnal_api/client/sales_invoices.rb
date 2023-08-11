@@ -4,7 +4,6 @@ module JurnalApi
   class Client
     # Defines methods related to SalesOrders
     module SalesInvoices
-
       def sales_invoices(params = {})
         response = get('sales_invoices', params)
         response
@@ -12,6 +11,11 @@ module JurnalApi
 
       def sales_invoice_find(id)
         response = get("sales_invoices/#{id}")
+        response
+      end
+
+      def sales_invoice_link(id)
+        response = get("sales_invoices/#{id}/register_tiny_url")
         response
       end
 
