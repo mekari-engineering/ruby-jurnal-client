@@ -1,0 +1,742 @@
+{
+  "sales_quotes": [
+    {
+      "id": 440,
+      "transaction_no": "INV-12sadd34asd5a67a8",
+      "email": "customer@example.com",
+      "address": "JL. Gatot Subroto 55, Kuningan, Jakarta, 11739",
+      "message": "message goes here",
+      "memo": "memo goes here",
+      "remaining": "9720000.0",
+      "original_amount": "9720000.0",
+      "discount_price": "1080000.0",
+      "shipping_price": "0.0",
+      "shipping_address": "",
+      "is_shipped": false,
+      "ship_via": null,
+      "subtotal": "12000000.0",
+      "reference_no": null,
+      "tracking_no": null,
+      "tax_after_discount": true,
+      "discount_unit": "10.0",
+      "tax_amount": "0.0",
+      "status": "approved",
+      "custom_id": "sales_quasasdfasddote",
+      "created_at": "2017-12-26T06:18:42.000Z",
+      "deleted_at": null,
+      "deletable": true,
+      "editable": true,
+      "audited_by": null,
+      "transaction_date": "25/08/2016",
+      "expiry_date": null,
+      "shipping_date": null,
+      "remaining_currency_format": "Rp.  9.720.000,00",
+      "shipping_price_currency_format": "Rp.  0,00",
+      "tax_amount_currency_format": "Rp.  0,00",
+      "discount_price_currency_format": "Rp.  1.080.000,00",
+      "subtotal_currency_format": "Rp.  12.000.000,00",
+      "discount_per_lines": "1200000.0",
+      "discount_per_lines_currency_format": "Rp.  1.200.000,00",
+      "transaction_status": {
+        "id": 1,
+        "name": "Open",
+        "name_bahasa": "Belum Dibayar"
+      },
+      "transaction_lines_attributes": [
+        {
+          "id": 358,
+          "custom_id": null,
+          "description": null,
+          "amount": "10800000.0",
+          "discount": "10.0",
+          "rate": "12000000.0",
+          "tax": null,
+          "line_tax": {
+            "id": null,
+            "name": null,
+            "rate": null
+          },
+          "amount_currency_format": "Rp.  10.800.000,00",
+          "rate_currency_format": "Rp.  12.000.000,00",
+          "has_return_line": false,
+          "quantity": 1,
+          "product": {
+            "id": 187,
+            "name": "makanan lagi",
+            "code": "123",
+            "product_custom_id": null,
+            "archive": false,
+            "quantity": 0,
+            "track_inventory": false
+          },
+          "unit": {
+            "id": 119,
+            "name": "Pcs"
+          }
+        }
+      ],
+      "person": {
+        "id": 55,
+        "display_name": "Display Name",
+        "email": "email@jurnal.id",
+        "address": "Address here",
+        "phone": "12412124123",
+        "fax": "32412342314"
+      },
+      "discount_type": {
+        "id": 1,
+        "name": "Percent",
+        "name_bahasa": "Persen"
+      },
+      "term": {
+        "id": 587,
+        "name": "Cash on Delivery",
+        "longetivity": 0
+      },
+      "tax": {
+        "id": null,
+        "name": null,
+        "rate": null
+      },
+      "tax_details": [],
+      "tags": null,
+      "tags_string": "",
+      "updated_at": "2017-12-26T06:18:42.000Z",
+      "currency_code": "IDR",
+      "currency_rate": 1
+    },
+    {
+      "id": 439,
+      "transaction_no": "INV-12assa34asd5678",
+      "email": "customer@example.com",
+      "address": "JL. Gatot Subroto 55, Kuningan, Jakarta, 11739",
+      "message": "message goes here",
+      "memo": "memo goes here",
+      "remaining": "9720000.0",
+      "original_amount": "9720000.0",
+      "discount_price": "1080000.0",
+      "shipping_price": "0.0",
+      "shipping_address": "",
+      "is_shipped": false,
+      "ship_via": null,
+      "subtotal": "12000000.0",
+      "reference_no": null,
+      "tracking_no": null,
+      "tax_after_discount": true,
+      "discount_unit": "10.0",
+      "tax_amount": "0.0",
+      "status": "approved",
+      "custom_id": "sales_quaassasdote",
+      "created_at": "2017-12-26T06:18:30.000Z",
+      "deleted_at": null,
+      "deletable": true,
+      "editable": true,
+      "audited_by": null,
+      "transaction_date": "25/08/2016",
+      "expiry_date": null,
+      "shipping_date": null,
+      "remaining_currency_format": "Rp.  9.720.000,00",
+      "shipping_price_currency_format": "Rp.  0,00",
+      "tax_amount_currency_format": "Rp.  0,00",
+      "discount_price_currency_format": "Rp.  1.080.000,00",
+      "subtotal_currency_format": "Rp.  12.000.000,00",
+      "discount_per_lines": "1200000.0",
+      "discount_per_lines_currency_format": "Rp.  1.200.000,00",
+      "transaction_status": {
+        "id": 1,
+        "name": "Open",
+        "name_bahasa": "Belum Dibayar"
+      },
+      "transaction_lines_attributes": [
+        {
+          "id": 357,
+          "custom_id": null,
+          "description": null,
+          "amount": "10800000.0",
+          "discount": "10.0",
+          "rate": "12000000.0",
+          "tax": null,
+          "line_tax": {
+            "id": null,
+            "name": null,
+            "rate": null
+          },
+          "amount_currency_format": "Rp.  10.800.000,00",
+          "rate_currency_format": "Rp.  12.000.000,00",
+          "has_return_line": false,
+          "quantity": 1,
+          "product": {
+            "id": 187,
+            "name": "makanan lagi",
+            "code": "123",
+            "product_custom_id": null,
+            "archive": false,
+            "quantity": 0,
+            "track_inventory": false
+          },
+          "unit": {
+            "id": 119,
+            "name": "Pcs"
+          }
+        }
+      ],
+      "person": {
+        "id": 55,
+        "display_name": "Display Name",
+        "email": "email@jurnal.id",
+        "address": "Address here",
+        "phone": "12412124123",
+        "fax": "32412342314"
+      },
+      "discount_type": {
+        "id": 1,
+        "name": "Percent",
+        "name_bahasa": "Persen"
+      },
+      "term": {
+        "id": 587,
+        "name": "Cash on Delivery",
+        "longetivity": 0
+      },
+      "tax": {
+        "id": null,
+        "name": null,
+        "rate": null
+      },
+      "tax_details": [],
+      "tags": null,
+      "tags_string": "",
+      "updated_at": "2017-12-26T06:18:30.000Z",
+      "currency_code": "IDR",
+      "currency_rate": 1
+    },
+    {
+      "id": 407,
+      "transaction_no": "INV-12sadd34asd5a678",
+      "email": "customer@example.com",
+      "address": "JL. Gatot Subroto 55, Kuningan, Jakarta, 11739",
+      "message": "message goes here",
+      "memo": "memo goes here",
+      "remaining": "9720000.0",
+      "original_amount": "9720000.0",
+      "discount_price": "1080000.0",
+      "shipping_price": "0.0",
+      "shipping_address": "",
+      "is_shipped": false,
+      "ship_via": null,
+      "subtotal": "12000000.0",
+      "reference_no": null,
+      "tracking_no": null,
+      "tax_after_discount": true,
+      "discount_unit": "10.0",
+      "tax_amount": "0.0",
+      "status": "approved",
+      "custom_id": "sales_quasasdfsddote",
+      "created_at": "2017-12-21T11:37:43.000Z",
+      "deleted_at": null,
+      "deletable": true,
+      "editable": true,
+      "audited_by": null,
+      "transaction_date": "25/08/2016",
+      "expiry_date": null,
+      "shipping_date": null,
+      "remaining_currency_format": "Rp.  9.720.000,00",
+      "shipping_price_currency_format": "Rp.  0,00",
+      "tax_amount_currency_format": "Rp.  0,00",
+      "discount_price_currency_format": "Rp.  1.080.000,00",
+      "subtotal_currency_format": "Rp.  12.000.000,00",
+      "discount_per_lines": "1200000.0",
+      "discount_per_lines_currency_format": "Rp.  1.200.000,00",
+      "transaction_status": {
+        "id": 1,
+        "name": "Open",
+        "name_bahasa": "Belum Dibayar"
+      },
+      "transaction_lines_attributes": [
+        {
+          "id": 331,
+          "custom_id": null,
+          "description": "187 ini",
+          "amount": "10800000.0",
+          "discount": "10.0",
+          "rate": "12000000.0",
+          "tax": null,
+          "line_tax": {
+            "id": null,
+            "name": null,
+            "rate": null
+          },
+          "amount_currency_format": "Rp.  10.800.000,00",
+          "rate_currency_format": "Rp.  12.000.000,00",
+          "has_return_line": false,
+          "quantity": 1,
+          "product": {
+            "id": 187,
+            "name": "makanan lagi",
+            "code": "123",
+            "product_custom_id": null,
+            "archive": false,
+            "quantity": 0,
+            "track_inventory": false
+          },
+          "unit": {
+            "id": 119,
+            "name": "Pcs"
+          }
+        }
+      ],
+      "person": {
+        "id": 55,
+        "display_name": "Display Name",
+        "email": "email@jurnal.id",
+        "address": "Address here",
+        "phone": "12412124123",
+        "fax": "32412342314"
+      },
+      "discount_type": {
+        "id": 1,
+        "name": "Percent",
+        "name_bahasa": "Persen"
+      },
+      "term": {
+        "id": 587,
+        "name": "Cash on Delivery",
+        "longetivity": 0
+      },
+      "tax": {
+        "id": null,
+        "name": null,
+        "rate": null
+      },
+      "tax_details": [],
+      "tags": null,
+      "tags_string": "",
+      "updated_at": "2017-12-21T11:37:43.000Z",
+      "currency_code": "IDR",
+      "currency_rate": 1
+    },
+    {
+      "id": 406,
+      "transaction_no": "INV-12sa34asd5a678",
+      "email": "customer@example.com",
+      "address": "JL. Gatot Subroto 55, Kuningan, Jakarta, 11739",
+      "message": "message goes here",
+      "memo": "memo goes here",
+      "remaining": "9720000.0",
+      "original_amount": "9720000.0",
+      "discount_price": "1080000.0",
+      "shipping_price": "0.0",
+      "shipping_address": "",
+      "is_shipped": false,
+      "ship_via": null,
+      "subtotal": "12000000.0",
+      "reference_no": null,
+      "tracking_no": null,
+      "tax_after_discount": true,
+      "discount_unit": "10.0",
+      "tax_amount": "0.0",
+      "status": "approved",
+      "custom_id": "sales_quasasddote",
+      "created_at": "2017-12-21T11:36:53.000Z",
+      "deleted_at": null,
+      "deletable": true,
+      "editable": true,
+      "audited_by": null,
+      "transaction_date": "25/08/2016",
+      "expiry_date": null,
+      "shipping_date": null,
+      "remaining_currency_format": "Rp.  9.720.000,00",
+      "shipping_price_currency_format": "Rp.  0,00",
+      "tax_amount_currency_format": "Rp.  0,00",
+      "discount_price_currency_format": "Rp.  1.080.000,00",
+      "subtotal_currency_format": "Rp.  12.000.000,00",
+      "discount_per_lines": "1200000.0",
+      "discount_per_lines_currency_format": "Rp.  1.200.000,00",
+      "transaction_status": {
+        "id": 1,
+        "name": "Open",
+        "name_bahasa": "Belum Dibayar"
+      },
+      "transaction_lines_attributes": [
+        {
+          "id": 330,
+          "custom_id": null,
+          "description": "187 ini",
+          "amount": "10800000.0",
+          "discount": "10.0",
+          "rate": "12000000.0",
+          "tax": null,
+          "line_tax": {
+            "id": null,
+            "name": null,
+            "rate": null
+          },
+          "amount_currency_format": "Rp.  10.800.000,00",
+          "rate_currency_format": "Rp.  12.000.000,00",
+          "has_return_line": false,
+          "quantity": 1,
+          "product": {
+            "id": 187,
+            "name": "makanan lagi",
+            "code": "123",
+            "product_custom_id": null,
+            "archive": false,
+            "quantity": 0,
+            "track_inventory": false
+          },
+          "unit": {
+            "id": 119,
+            "name": "Pcs"
+          }
+        }
+      ],
+      "person": {
+        "id": 55,
+        "display_name": "Display Name",
+        "email": "email@jurnal.id",
+        "address": "Address here",
+        "phone": "12412124123",
+        "fax": "32412342314"
+      },
+      "discount_type": {
+        "id": 1,
+        "name": "Percent",
+        "name_bahasa": "Persen"
+      },
+      "term": {
+        "id": 587,
+        "name": "Cash on Delivery",
+        "longetivity": 0
+      },
+      "tax": {
+        "id": null,
+        "name": null,
+        "rate": null
+      },
+      "tax_details": [],
+      "tags": null,
+      "tags_string": "",
+      "updated_at": "2017-12-21T11:36:53.000Z",
+      "currency_code": "IDR",
+      "currency_rate": 1
+    },
+    {
+      "id": 365,
+      "transaction_no": "INV-12sa34asd5678",
+      "email": "customer@example.com",
+      "address": "JL. Gatot Subroto 55, Kuningan, Jakarta, 11739",
+      "message": "message goes here",
+      "memo": "memo goes here",
+      "remaining": "9720000.0",
+      "original_amount": "9720000.0",
+      "discount_price": "1080000.0",
+      "shipping_price": "0.0",
+      "shipping_address": "",
+      "is_shipped": false,
+      "ship_via": null,
+      "subtotal": "12000000.0",
+      "reference_no": null,
+      "tracking_no": null,
+      "tax_after_discount": true,
+      "discount_unit": "10.0",
+      "tax_amount": "0.0",
+      "status": "approved",
+      "custom_id": "sales_quasasdote",
+      "created_at": "2017-12-19T10:55:34.000Z",
+      "deleted_at": null,
+      "deletable": true,
+      "editable": true,
+      "audited_by": null,
+      "transaction_date": "25/08/2016",
+      "expiry_date": null,
+      "shipping_date": null,
+      "remaining_currency_format": "Rp.  9.720.000,00",
+      "shipping_price_currency_format": "Rp.  0,00",
+      "tax_amount_currency_format": "Rp.  0,00",
+      "discount_price_currency_format": "Rp.  1.080.000,00",
+      "subtotal_currency_format": "Rp.  12.000.000,00",
+      "discount_per_lines": "1200000.0",
+      "discount_per_lines_currency_format": "Rp.  1.200.000,00",
+      "transaction_status": {
+        "id": 1,
+        "name": "Open",
+        "name_bahasa": "Belum Dibayar"
+      },
+      "transaction_lines_attributes": [
+        {
+          "id": 284,
+          "custom_id": null,
+          "description": "heheheh",
+          "amount": "10800000.0",
+          "discount": "10.0",
+          "rate": "12000000.0",
+          "tax": null,
+          "line_tax": {
+            "id": null,
+            "name": null,
+            "rate": null
+          },
+          "amount_currency_format": "Rp.  10.800.000,00",
+          "rate_currency_format": "Rp.  12.000.000,00",
+          "has_return_line": false,
+          "quantity": 1,
+          "product": {
+            "id": 184,
+            "name": "Ayam Bakar Madu",
+            "code": null,
+            "product_custom_id": null,
+            "archive": true,
+            "quantity": 0,
+            "track_inventory": null
+          },
+          "unit": {
+            "id": 119,
+            "name": "Pcs"
+          }
+        }
+      ],
+      "person": {
+        "id": 55,
+        "display_name": "Display Name",
+        "email": "email@jurnal.id",
+        "address": "Address here",
+        "phone": "12412124123",
+        "fax": "32412342314"
+      },
+      "discount_type": {
+        "id": 1,
+        "name": "Percent",
+        "name_bahasa": "Persen"
+      },
+      "term": {
+        "id": 587,
+        "name": "Cash on Delivery",
+        "longetivity": 0
+      },
+      "tax": {
+        "id": null,
+        "name": null,
+        "rate": null
+      },
+      "tax_details": [],
+      "tags": null,
+      "tags_string": "",
+      "updated_at": "2017-12-19T10:55:34.000Z",
+      "currency_code": "IDR",
+      "currency_rate": 1
+    },
+    {
+      "id": 364,
+      "transaction_no": "INV-1234asd5678",
+      "email": "customer@example.com",
+      "address": "JL. Gatot Subroto 55, Kuningan, Jakarta, 11739",
+      "message": "message goes here",
+      "memo": "memo goes here",
+      "remaining": "9720000.0",
+      "original_amount": "9720000.0",
+      "discount_price": "1080000.0",
+      "shipping_price": "0.0",
+      "shipping_address": "",
+      "is_shipped": false,
+      "ship_via": null,
+      "subtotal": "12000000.0",
+      "reference_no": null,
+      "tracking_no": null,
+      "tax_after_discount": true,
+      "discount_unit": "10.0",
+      "tax_amount": "0.0",
+      "status": "approved",
+      "custom_id": "sales_quasdote",
+      "created_at": "2017-12-19T10:54:14.000Z",
+      "deleted_at": null,
+      "deletable": true,
+      "editable": true,
+      "audited_by": null,
+      "transaction_date": "25/08/2016",
+      "expiry_date": null,
+      "shipping_date": null,
+      "remaining_currency_format": "Rp.  9.720.000,00",
+      "shipping_price_currency_format": "Rp.  0,00",
+      "tax_amount_currency_format": "Rp.  0,00",
+      "discount_price_currency_format": "Rp.  1.080.000,00",
+      "subtotal_currency_format": "Rp.  12.000.000,00",
+      "discount_per_lines": "1200000.0",
+      "discount_per_lines_currency_format": "Rp.  1.200.000,00",
+      "transaction_status": {
+        "id": 1,
+        "name": "Open",
+        "name_bahasa": "Belum Dibayar"
+      },
+      "transaction_lines_attributes": [
+        {
+          "id": 282,
+          "custom_id": null,
+          "description": null,
+          "amount": "10800000.0",
+          "discount": "10.0",
+          "rate": "12000000.0",
+          "tax": null,
+          "line_tax": {
+            "id": null,
+            "name": null,
+            "rate": null
+          },
+          "amount_currency_format": "Rp.  10.800.000,00",
+          "rate_currency_format": "Rp.  12.000.000,00",
+          "has_return_line": false,
+          "quantity": 1,
+          "product": {
+            "id": 187,
+            "name": "makanan lagi",
+            "code": "123",
+            "product_custom_id": null,
+            "archive": false,
+            "quantity": 0,
+            "track_inventory": false
+          },
+          "unit": {
+            "id": 119,
+            "name": "Pcs"
+          }
+        }
+      ],
+      "person": {
+        "id": 55,
+        "display_name": "Display Name",
+        "email": "email@jurnal.id",
+        "address": "Address here",
+        "phone": "12412124123",
+        "fax": "32412342314"
+      },
+      "discount_type": {
+        "id": 1,
+        "name": "Percent",
+        "name_bahasa": "Persen"
+      },
+      "term": {
+        "id": 587,
+        "name": "Cash on Delivery",
+        "longetivity": 0
+      },
+      "tax": {
+        "id": null,
+        "name": null,
+        "rate": null
+      },
+      "tax_details": [],
+      "tags": null,
+      "tags_string": "",
+      "updated_at": "2017-12-19T10:54:14.000Z",
+      "currency_code": "IDR",
+      "currency_rate": 1
+    },
+    {
+      "id": 319,
+      "transaction_no": "INV-12345678",
+      "email": "customer@example.com",
+      "address": "JL. Gatot Subroto 55, Kuningan, Jakarta, 11739",
+      "message": "message goes here",
+      "memo": "memo goes here",
+      "remaining": "9720000.0",
+      "original_amount": "9720000.0",
+      "discount_price": "1080000.0",
+      "shipping_price": "0.0",
+      "shipping_address": "",
+      "is_shipped": false,
+      "ship_via": null,
+      "subtotal": "12000000.0",
+      "reference_no": null,
+      "tracking_no": null,
+      "tax_after_discount": true,
+      "discount_unit": "10.0",
+      "tax_amount": "0.0",
+      "status": "approved",
+      "custom_id": "sales_quote",
+      "created_at": "2017-11-03T09:05:13.000Z",
+      "deleted_at": null,
+      "deletable": true,
+      "editable": true,
+      "audited_by": null,
+      "transaction_date": "25/08/2016",
+      "expiry_date": null,
+      "shipping_date": null,
+      "remaining_currency_format": "Rp.  9.720.000,00",
+      "shipping_price_currency_format": "Rp.  0,00",
+      "tax_amount_currency_format": "Rp.  0,00",
+      "discount_price_currency_format": "Rp.  1.080.000,00",
+      "subtotal_currency_format": "Rp.  12.000.000,00",
+      "discount_per_lines": "1200000.0",
+      "discount_per_lines_currency_format": "Rp.  1.200.000,00",
+      "transaction_status": {
+        "id": 1,
+        "name": "Open",
+        "name_bahasa": "Belum Dibayar"
+      },
+      "transaction_lines_attributes": [
+        {
+          "id": 246,
+          "custom_id": null,
+          "description": null,
+          "amount": "10800000.0",
+          "discount": "10.0",
+          "rate": "12000000.0",
+          "tax": null,
+          "line_tax": {
+            "id": null,
+            "name": null,
+            "rate": null
+          },
+          "amount_currency_format": "Rp.  10.800.000,00",
+          "rate_currency_format": "Rp.  12.000.000,00",
+          "has_return_line": false,
+          "quantity": 1,
+          "product": {
+            "id": 185,
+            "name": "Penjualan",
+            "code": null,
+            "product_custom_id": null,
+            "archive": true,
+            "quantity": 0,
+            "track_inventory": null
+          },
+          "unit": {
+            "id": 119,
+            "name": "Pcs"
+          }
+        }
+      ],
+      "person": {
+        "id": 51,
+        "display_name": "Budi",
+        "email": "",
+        "address": null,
+        "phone": "",
+        "fax": null
+      },
+      "discount_type": {
+        "id": 1,
+        "name": "Percent",
+        "name_bahasa": "Persen"
+      },
+      "term": {
+        "id": 587,
+        "name": "Cash on Delivery",
+        "longetivity": 0
+      },
+      "tax": {
+        "id": null,
+        "name": null,
+        "rate": null
+      },
+      "tax_details": [],
+      "tags": null,
+      "tags_string": "",
+      "updated_at": "2017-11-03T09:05:13.000Z",
+      "currency_code": "IDR",
+      "currency_rate": 1
+    }
+  ],
+  "total_count": 7,
+  "current_page": 1,
+  "total_pages": 1
+}
