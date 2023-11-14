@@ -36,8 +36,7 @@ module JurnalApi
           request.url(URI.encode(path), options)
         when :post, :put
           request.path = URI.encode(path)
-          # request.headers['Content-Type'] = 'application/json'
-          request.headers['Content-Type'] = connection_options.dig(:headers, 'Content-Type').nil? ? 'application/json' : connection_options[:headers]['Content-Type']
+          request.headers['Content-Type'] = header_content_type
           request.body = options unless options.empty?
         end
       end
@@ -46,6 +45,10 @@ module JurnalApi
       return response.body if no_response_wrapper
       return Response.create( response.body, {:limit => response.headers['x-ratelimit-limit'].to_i,
                                               :remaining => response.headers['x-ratelimit-remaining'].to_i} )
+    end
+
+    def header_content_type
+      @header_content_type ||= connection_options.dig(:headers, 'Content-Type').nil? ? 'application/json' : connection_options[:headers]['Content-Type']
     end
 
     def formatted_path(path)
