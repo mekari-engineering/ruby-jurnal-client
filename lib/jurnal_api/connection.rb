@@ -9,14 +9,17 @@ module JurnalApi
 
     def connection(raw = false)
       basic_headers = {
-        'Accept'      => "application/#{format}; charset=utf-8",
-        'User-Agent'  => user_agent
+        'Accept'        => "application/#{format}; charset=utf-8",
+        'User-Agent'    => user_agent,
+        'Content-Type'  => "application/json"
       }
 
       options = { headers: basic_headers, url: endpoint }.merge(connection_options)
 
       Faraday::Connection.new(options) do |connection|
         # SET middlewares first
+        connection.request    :multipart
+        connection.request    :url_encoded
         connection.response   :logger
         connection.use        FaradayMiddleware::RaiseHttpException
         connection.use        Faraday::Request::UrlEncoded
