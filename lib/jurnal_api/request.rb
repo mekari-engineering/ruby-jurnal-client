@@ -31,12 +31,13 @@ module JurnalApi
       response = connection(raw).send(method) do |request|
         path = formatted_path(path) unless unformatted
 
+        request.headers['Content-Type'] = header_content_type
+
         case method
         when :get, :delete
           request.url(URI.encode(path), options)
         when :post, :put
           request.path = URI.encode(path)
-          request.headers['Content-Type'] = header_content_type
           request.body = options unless options.empty?
         end
       end
