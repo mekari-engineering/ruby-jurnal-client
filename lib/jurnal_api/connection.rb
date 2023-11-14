@@ -17,6 +17,8 @@ module JurnalApi
 
       Faraday::Connection.new(options) do |connection|
         # SET middlewares first
+        connection.request    :multipart
+        connection.request    :url_encoded
         connection.response   :logger
         connection.use        FaradayMiddleware::RaiseHttpException
         connection.use        Faraday::Request::UrlEncoded

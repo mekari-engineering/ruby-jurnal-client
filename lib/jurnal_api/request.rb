@@ -36,7 +36,8 @@ module JurnalApi
           request.url(URI.encode(path), options)
         when :post, :put
           request.path = URI.encode(path)
-          request.headers['Content-Type'] = 'application/json'
+          # request.headers['Content-Type'] = 'application/json'
+          request.headers['Content-Type'] = connection_options.dig(:headers, 'Content-Type').nil? ? 'application/json' : connection_options[:headers]['Content-Type']
           request.body = options unless options.empty?
         end
       end
