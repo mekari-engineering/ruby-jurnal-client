@@ -19,8 +19,7 @@ module JurnalApi
         response
       end
 
-      def sales_order_create(params = {}, is_upload = false)
-        self.connection_options[:headers] = {'Content-Type'=>'multipart/form-data'} if is_upload
+      def sales_order_create(params = {})
         response = post('sales_orders', params)
         response
       end
