@@ -9,8 +9,9 @@ module JurnalApi
 
     def connection(raw = false)
       basic_headers = {
-        'Accept'      => "application/#{format}; charset=utf-8",
-        'User-Agent'  => user_agent
+        'Accept'        => "application/#{format}; charset=utf-8",
+        'User-Agent'    => user_agent,
+        'Content-Type'  => "application/json"
       }
 
       options = { headers: basic_headers, url: endpoint }.merge(connection_options)

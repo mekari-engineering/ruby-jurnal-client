@@ -31,8 +31,6 @@ module JurnalApi
       response = connection(raw).send(method) do |request|
         path = formatted_path(path) unless unformatted
 
-        request.headers['Content-Type'] = header_content_type
-
         case method
         when :get, :delete
           request.url(URI.encode(path), options)
@@ -46,10 +44,6 @@ module JurnalApi
       return response.body if no_response_wrapper
       return Response.create( response.body, {:limit => response.headers['x-ratelimit-limit'].to_i,
                                               :remaining => response.headers['x-ratelimit-remaining'].to_i} )
-    end
-
-    def header_content_type
-      @header_content_type ||= connection_options.dig(:headers, 'Content-Type').nil? ? 'application/json' : connection_options[:headers]['Content-Type']
     end
 
     def formatted_path(path)
