@@ -1,0 +1,24 @@
+{
+  "banks": [
+    {
+        "id": 1,
+        "name": "PT. BANK CENTRAL ASIA TBK.",
+        "created_at": "2016-10-21T06:05:38.000Z",
+        "updated_at": "2022-11-30T09:11:47.000Z",
+        "use_for_direct_feed": true,
+        "use_for_bank_account": true,
+        "use_for_transfer": false,
+        "auto_confirm": true
+    },
+    {
+        "id": 2,
+        "name": "BCA Personal",
+        "created_at": "2016-10-21T06:05:38.000Z",
+        "updated_at": "2016-10-21T06:05:38.000Z",
+        "use_for_direct_feed": true,
+        "use_for_bank_account": true,
+        "use_for_transfer": false,
+        "auto_confirm": false
+    }
+  ]
+}
