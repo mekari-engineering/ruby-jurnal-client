@@ -109,6 +109,36 @@ RSpec.describe JurnalApi::Client::SalesOrders do
     end
   end
 
+  describe '#update' do
+    context 'successful' do
+      let(:dummy_params) do
+        read_file_fixture('requests/sales_orders/create_valid.json')
+      end
+      let(:dummy_response) do
+        read_file_fixture('responses/sales_orders/create_success.json')
+      end
+
+      before do
+        @expected_stub =
+          stub_request(:patch, "#{module_endpoint}.json")
+          .with(body: dummy_params.to_json)
+          .to_return(status: 201, body: dummy_response.to_json, headers: header_json)
+      end
+
+      subject { client.sales_order_update(dummy_params.to_json) }
+
+      it 'should hit the expected stub' do
+        subject
+
+        expect(@expected_stub).to have_been_requested
+      end
+
+      it 'should return a json response' do
+        expect(subject).to eq dummy_response
+      end
+    end
+  end
+
   describe '#convert_to_invoice' do
     context 'successful' do
       let(:dummy_params) do

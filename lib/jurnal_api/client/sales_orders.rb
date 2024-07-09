@@ -24,6 +24,11 @@ module JurnalApi
         response
       end
 
+      def sales_order_update(params = {})
+        response = patch('sales_orders', params)
+        response
+      end
+
       def sales_order_convert_to_invoice(id, params = {})
         url      = "sales_orders/#{id}/convert_to_invoice"
         response = post(url, params)
