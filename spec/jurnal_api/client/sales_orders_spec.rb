@@ -4,7 +4,7 @@ require 'spec_helper'
 
 RSpec.describe JurnalApi::Client::SalesOrders do
   let(:client)          { JurnalApi::Client.new }
-  let(:module_endpoint) { 'https://sandbox-api.jurnal.id' + '/core/api/v1' + '/sales_orders' }
+  let(:module_endpoint) { 'https://sandbox-api.jurnal.id/core/api/v1/sales_orders' }
 
   describe '#get' do
     context 'successful' do
@@ -117,15 +117,16 @@ RSpec.describe JurnalApi::Client::SalesOrders do
       let(:dummy_response) do
         read_file_fixture('responses/sales_orders/create_success.json')
       end
+      let(:so_id) { 909 }
 
       before do
         @expected_stub =
-          stub_request(:patch, "#{module_endpoint}.json")
+          stub_request(:patch, "#{module_endpoint}/#{so_id}.json")
           .with(body: dummy_params.to_json)
           .to_return(status: 201, body: dummy_response.to_json, headers: header_json)
       end
 
-      subject { client.sales_order_update(dummy_params.to_json) }
+      subject { client.sales_order_update(so_id, dummy_params.to_json) }
 
       it 'should hit the expected stub' do
         subject

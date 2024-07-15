@@ -24,8 +24,8 @@ module JurnalApi
         response
       end
 
-      def sales_order_update(params = {})
-        response = patch('sales_orders', params)
+      def sales_order_update(id, params = {})
+        response = patch("sales_orders/#{id}", params)
         response
       end
 
