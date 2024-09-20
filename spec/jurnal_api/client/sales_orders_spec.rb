@@ -10,13 +10,15 @@ RSpec.describe JurnalApi::Client::SalesOrders do
     context 'successful' do
       let(:dummy_response) { read_file_fixture('responses/sales_orders/create_success.json') }
       let(:sales_order_id) { dummy_response['sales_order']['id'] }
+      let(:dummy_params) { { for_internal: true } }
 
       before do
         @expected_stub = stub_request(:get, "#{module_endpoint}/#{sales_order_id}.json")
+          .with(query: dummy_params)
           .to_return(status: 200, body: dummy_response.to_json, headers: header_json)
       end
 
-      subject { client.sales_order_find(sales_order_id) }
+      subject { client.sales_order_find(sales_order_id, dummy_params) }
 
       it 'should hit the expected stub' do
         subject

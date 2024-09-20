@@ -9,8 +9,8 @@ module JurnalApi
         response
       end
 
-      def sales_order_find(id)
-        response = get("sales_orders/#{id}")
+      def sales_order_find(id, params = {})
+        response = get("sales_orders/#{id}", params)
         response
       end
 
