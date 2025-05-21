@@ -1,6 +1,6 @@
 # JurnalApi
 
-A Ruby wrapper for the Jurnal REST APIs
+A Ruby wrapper for the [Jurnal](https://jurnal.id) REST APIs
 
 ## Installation
 
